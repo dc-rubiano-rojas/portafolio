@@ -34,7 +34,7 @@ const routerOptions: ExtraOptions = {
 };
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', initialNavigation: 'enabled' })],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', initialNavigation: 'enabled',  useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
