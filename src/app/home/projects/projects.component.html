@@ -1,0 +1,34 @@
+<div class="fondo"></div>
+
+<div class="porta">
+    <h3>Portfolio</h3>
+
+    <hr>
+    <div class="icon-cargando" *ngIf="cargando">
+        <!-- <i id="cargando" class="fa fa-spinner" aria-hidden="true"></i> -->
+        <div class="spinner-border text-dark" role="status"></div>
+    </div>
+
+    <div class="projects">
+        <div class="project" (click)="open(content)" *ngFor='let project of projects'>
+            <i *ngIf="projectService.token" (click)='borrarProject(project)' class="fa fa-times" aria-hidden="true"></i>
+            <i *ngIf="projectService.token" class="fa fa-pencil" (click)='editarProject(project)' aria-hidden="true"></i>
+            <img *ngIf="project.img" src="{{URL + '/image/' + project.img}}" alt="">
+            <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">{{project.title}}</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p>{{project.description}}</p>
+                </div>
+                <div class="modal-footer">
+                    <img id="img-modal" *ngIf="project.img" src="{{URL + '/image/' + project.img}}" alt="">
+                </div>
+            </ng-template>
+        </div>
+
+    </div>
+</div>

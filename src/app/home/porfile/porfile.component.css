@@ -1,0 +1,81 @@
+h3 {
+    text-align: center;
+    font-size: 50px;
+    /* border: 2px solid black; */
+    font-family: 'Audiowide', cursive;
+}
+
+hr {
+    height: 1px;
+    width: 75%;
+    margin: 0 auto;
+    background: linear-gradient(to right, white, #FFC300, white);
+}
+
+.image {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 999px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+#perfil {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 20px 50px 40px 50px;
+}
+
+.caja {
+    width: 40%;
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: start;
+    margin: 10px;
+    padding: 15px 10px 10px 20px;
+    border-radius: 50px 0 50px 0;
+    box-shadow: 5px 5px 10px #571845;
+}
+
+
+/* .cargando-profile {
+    display: block;
+    margin: 0 auto;
+} */
+
+.icon-cargando {
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    #perfil {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .caja {
+        width: 100%;
+    }
+}
+
+@media (max-width: 861px) {
+    h3 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    h3 {
+        margin-top: 20px;
+    }
+    img {
+        height: 150px;
+        width: 150px;
+    }
+}

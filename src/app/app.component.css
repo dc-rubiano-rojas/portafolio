@@ -1,0 +1,94 @@
+.contenido {
+    height: 100vh;
+}
+
+
+/* NG SIDEBAR */
+
+ng-sidebar-content {
+    height: 100vw;
+}
+
+::ng-deep .ng-sidebar {
+    background-color: #FF5733;
+    width: 300px;
+    padding: 2em 3em;
+    /* box-shadow: 0 0 2.5em #af8806; */
+}
+
+
+/* .encabezadoSidebar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+} */
+
+#titleSidebar {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    margin: 10px;
+}
+
+#iconSidebar {
+    font-size: 30px;
+    cursor: pointer;
+    justify-self: flex-start;
+}
+
+#menu {
+    margin-top: 2em;
+    display: block;
+}
+
+#menu li {
+    margin-bottom: 15px;
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}
+
+#menu li:hover {
+    background-color: #FFC300;
+}
+
+#menu li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    background-color: #ffc40063;
+}
+
+#quote {
+    text-align: center;
+}
+
+#quote b {
+    font-style: italic;
+}
+
+.abrirSidebar {
+    display: none;
+    position: absolute;
+    top: 54%;
+    /* left: 90%; */
+    right: 50px;
+    text-decoration: none;
+}
+
+.abrirSidebar i {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 885px) {
+    .abrirSidebar {
+        top: 412px;
+        display: block;
+    }
+}

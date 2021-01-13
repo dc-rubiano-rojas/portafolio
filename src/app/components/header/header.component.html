@@ -1,0 +1,34 @@
+<!-- <header> -->
+
+<header id="nav" [class.header_change]="headerVariable">
+
+    <div class="logo" (click)='toProfile()'>
+        <a hrouterLink="profile">
+            <span>DC</span>
+        </a>
+        <a id="texto" routerLink="profile">
+                Fullstack Developer
+            </a>
+    </div>
+
+
+
+    <ul>
+        <li (click)='toProfile()' routerLinkActive="active"><a routerLink="profile">Profile</a></li>
+
+        <li (click)='toPortfolio()' routerLinkActive="active"><a routerLink="projects">Portfolio</a></li>
+
+        <li (click)='toSkills()' routerLinkActive="active"><a routerLink="skills">Skills</a></li>
+
+        <li (click)='toContact()' routerLinkActive="active"><a routerLink="contact">Contact</a></li>
+
+        <li routerLinkActive="active" *ngIf="userService.token"><a routerLink="create-project">Creat New Project</a></li>
+        <li routerLinkActive="active" *ngIf="!userService.token"><a routerLink="signin">Login</a></li>
+        <li (click)="logout()" *ngIf="userService.token"><a routerLink="profile">Logout</a></li>
+    </ul>
+
+
+
+</header>
+
+<div class="clear-float"></div>

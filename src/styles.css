@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header_change {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#cargando {
+    font-size: 50px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: black;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+/* 
+.content {
+    margin: 0 20px 0px 20px
+} */
+
+
+/* .contenido {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+} */
+
+@media (max-width: 440px) {
+    h3 {
+        font-size: 35px !important;
+    }
+}

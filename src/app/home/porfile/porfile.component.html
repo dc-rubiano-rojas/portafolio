@@ -1,0 +1,17 @@
+<h3>Profile</h3>
+<hr>
+
+<div class="image">
+    <img src="../../../assets/yo.png" alt="">
+</div>
+<div class="icon-cargando" *ngIf="cargando">
+    <!-- <i id="cargando" class="cargando-profile" class="fa fa-spinner" aria-hidden="true"></i> -->
+    <div class="spinner-border text-dark" role="status"></div>
+</div>
+<div id="perfil">
+
+    <div class="caja spanish" *ngFor='let profile of profiles'>
+        {{profile.profile}}
+        <button type="button" class="btn btn-success" *ngIf="usersService.token" (click)='enviarProfileEditar(profile._id)'>Edit</button>
+    </div>
+</div>
